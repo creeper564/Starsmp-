@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARS SMP — 8 éléments. 8 dimensions. Une seule légende.</title>
+<meta name="description" content="STARS SMP est un serveur Minecraft scénarisé bâti autour de huit éléments et huit dimensions. Craft tes pouvoirs en public, ou rejoins le cercle des élus pour affronter les gardiens.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="starfield" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="#accueil" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="2" fill="#ff4fa3"/>
+        <path d="M20 4 L23 17 L36 20 L23 23 L20 36 L17 23 L4 20 L17 17 Z" stroke="#d4af6a" stroke-width="1" fill="none"/>
+      </svg>
+      <span class="brand-name">STARS <b>SMP</b></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#serveur">Le serveur</a>
+      <a href="#pouvoirs">Pouvoirs</a>
+      <a href="#dimensions">Dimensions</a>
+      <a href="#boss">Boss</a>
+      <a href="#lore">Lore</a>
+      <a href="#rejoindre">Rejoindre</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost btn-small" id="discordBtnHeader">Discord</a>
+      <a href="#rejoindre" class="btn btn-primary btn-small">Jouer</a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#accueil">Accueil</a>
+  <a href="#serveur">Le serveur</a>
+  <a href="#pouvoirs">Pouvoirs</a>
+  <a href="#dimensions">Dimensions</a>
+  <a href="#boss">Boss</a>
+  <a href="#lore">Lore</a>
+  <a href="#rejoindre">Rejoindre</a>
+  <div class="nav-actions">
+    <a href="#" class="btn btn-ghost" id="discordBtnMobile">Rejoindre le Discord</a>
+    <a href="#rejoindre" class="btn btn-primary">Jouer</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="accueil">
+  <div class="hero-eyebrow-mark reveal">Serveur Minecraft scénarisé</div>
+
+  <div class="hero-constellation reveal" id="heroConstellation" aria-hidden="true">
+    <!-- Filled by JS: constellation SVG -->
+  </div>
+
+  <h1 class="reveal">8 éléments. 8 dimensions.<br><em>Une seule légende.</em></h1>
+
+  <p class="hero-sub reveal">
+    Découvre un univers Minecraft où huit éléments façonnent huit dimensions uniques.
+    Mais seuls quelques élus pourront découvrir leur véritable puissance.
+  </p>
+
+  <div class="hero-actions reveal">
+    <a href="#pouvoirs" class="btn btn-primary">Découvrir les éléments</a>
+    <a href="#dimensions" class="btn btn-ghost">Explorer les dimensions</a>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>DÉFILER</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVEUR — PUBLIC / PRIVATE DIPTYCH
+     ============================================================ -->
+<section id="serveur">
+  <div class="diptych">
+    <div class="diptych-panel pub reveal">
+      <div class="diptych-kicker">STARS SMP PUBLIC</div>
+      <h2 class="diptych-title">L'aventure pour tous</h2>
+      <p class="section-desc">
+        Accessible à tous les joueurs. Explore, construis, progresse et découvre
+        l'univers de STARS SMP au fil de tes parties.
+      </p>
+      <ul class="diptych-list">
+        <li>Accessible à tous les joueurs</li>
+        <li>Minecraft, exploration &amp; construction</li>
+        <li>Aventure centrée sur les 8 éléments</li>
+        <li>Pouvoirs élémentaires craftables</li>
+        <li>Événements réguliers</li>
+        <li>Une communauté active</li>
+      </ul>
+      <a href="#pouvoirs" class="btn btn-ghost btn-small">Voir les pouvoirs craftables</a>
+    </div>
+
+    <div class="diptych-panel priv reveal">
+      <div class="diptych-kicker">STARS SMP PRIVATE</div>
+      <h2 class="diptych-title">Le cercle des élus</h2>
+      <p class="section-desc">
+        Une expérience exclusive, accessible uniquement aux personnes sélectionnées
+        par l'équipe du serveur — dont certains créateurs de contenu.
+      </p>
+      <ul class="diptych-list">
+        <li>Accès sur sélection uniquement</li>
+        <li>Runes pour accéder aux dimensions</li>
+        <li>8 dimensions à explorer</li>
+        <li>Boss custom à affronter</li>
+        <li>Progression scénarisée &amp; lore</li>
+        <li>Événements spéciaux</li>
+      </ul>
+      <a href="#boss" class="btn btn-ghost btn-small">Découvrir les gardiens</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LA RÈGLE FONDAMENTALE (Public vs Private, flux clair)
+     ============================================================ -->
+<section class="section-tight">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="section-kicker">Comment obtenir un pouvoir</p>
+      <h2 class="section-title">Deux chemins, une même puissance</h2>
+    </div>
+    <div class="access-compare reveal" style="max-width:760px;margin:0 auto;">
+      <div class="access-block is-public">
+        <span class="access-label">PUBLIC</span>
+        <div class="access-flow">Craft&nbsp;→&nbsp;Pouvoir&nbsp;→&nbsp;Capacités</div>
+      </div>
+      <div class="access-block is-private">
+        <span class="access-label">PRIVATE</span>
+        <div class="access-flow">Craft rune&nbsp;→&nbsp;Dimension&nbsp;→&nbsp;Boss&nbsp;→&nbsp;Vaincre&nbsp;→&nbsp;Drop&nbsp;→&nbsp;Capacités</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POUVOIRS — LES 8 ÉLÉMENTS
+     ============================================================ -->
+<section class="section" id="pouvoirs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker">Craft ton élément</p>
+      <h2 class="section-title">Les 8 éléments</h2>
+      <p class="section-desc">
+        Huit pouvoirs, huit dimensions associées. En public, chacun se craft.
+        En privé, chacun se mérite au bout d'un combat.
+      </p>
+    </div>
+    <div class="element-rows" id="elementRows"><!-- filled by JS --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIMENSIONS
+     ============================================================ -->
+<section class="section" id="dimensions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker">Huit mondes</p>
+      <h2 class="section-title">Les 8 dimensions</h2>
+      <p class="section-desc">
+        Chaque dimension abrite le pouvoir que seul un vainqueur peut emporter.
+        Clique sur une dimension pour en découvrir les détails.
+      </p>
+    </div>
+
+    <div class="dim-grid reveal" id="dimGrid"><!-- filled by JS --></div>
+
+    <div class="dim-detail" id="dimDetail">
+      <div class="dim-detail-head">
+        <h3 class="dim-detail-title" id="dimDetailTitle"></h3>
+        <button class="dim-detail-close" id="dimDetailClose" aria-label="Fermer">✕</button>
+      </div>
+      <div class="dim-detail-grid" id="dimDetailBody"><!-- filled by JS --></div>
+    </div>
+
+    <div class="cosmic-map reveal" id="cosmicMap" aria-label="Carte cosmique des huit dimensions">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOSS — LES GARDIENS
+     ============================================================ -->
+<section class="section" id="boss">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker">Version privée</p>
+      <h2 class="section-title">Les gardiens</h2>
+      <p class="section-desc">
+        Chaque dimension possède un gardien custom. Le vaincre libère le pouvoir
+        élémentaire qu'il protège depuis toujours.
+      </p>
+    </div>
+    <div class="boss-list" id="bossList"><!-- filled by JS --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RUNES + PROGRESSION PRIVÉE
+     ============================================================ -->
+<section class="section" id="runes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker">Système des runes</p>
+      <h2 class="section-title">Ouvrir la porte des dimensions</h2>
+      <p class="section-desc">Chaque dimension possède sa propre rune, à fabriquer pour ouvrir son portail.</p>
+    </div>
+
+    <div class="rune-note reveal" style="margin-bottom:3rem;">
+      Les runes sont des objets custom déjà présents sur le serveur Minecraft.
+      Leurs textures et recettes officielles seront ajoutées ici — aucune texture
+      ni recette n'est inventée sur ce site.
+    </div>
+
+    <div class="section-head reveal" style="margin-bottom:1.5rem;">
+      <h3 style="font-family:var(--font-display);font-style:italic;font-size:1.5rem;font-weight:500;margin:0;">Progression complète — Private SMP</h3>
+    </div>
+    <div class="steps reveal" id="privateSteps"><!-- filled by JS --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LORE
+     ============================================================ -->
+<section class="section" id="lore">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker">L'histoire des étoiles</p>
+      <h2 class="section-title">Le lore de STARS SMP</h2>
+    </div>
+    <div class="lore-body reveal" id="loreBody"><!-- filled by JS --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REJOINDRE
+     ============================================================ -->
+<section class="section" id="rejoindre">
+  <div class="wrap">
+    <div class="join-panel reveal">
+      <h2 class="join-title">Prêt à entrer dans la légende ?</h2>
+      <p class="join-sub">Rejoins STARS SMP et commence ton ascension à travers les huit éléments.</p>
+
+      <div class="ip-box">
+        <span class="ip-label">IP DU SERVEUR</span>
+        <span class="ip-value" id="serverIp">[IP À AJOUTER]</span>
+        <button class="ip-copy-btn" id="copyIpBtn">Copier l'IP</button>
+      </div>
+      <div class="version-line" id="serverVersion">Version Minecraft : [VERSION À AJOUTER]</div>
+
+      <div class="join-actions">
+        <a href="#" class="btn btn-primary" id="discordBtnJoin">Rejoindre le Discord</a>
+        <a href="#pouvoirs" class="btn btn-ghost">Voir les pouvoirs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-closing">8 éléments.<br>8 dimensions.<br>8 gardiens.<br>Une seule légende.<br><br><b>Bienvenue dans STARS SMP.</b></p>
+  <p class="footer-meta">STARS SMP — Serveur Minecraft non affilié à Mojang ou Microsoft.</p>
+</footer>
+
+<div class="toast" id="toast">IP copiée !</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
