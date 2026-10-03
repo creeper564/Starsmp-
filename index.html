@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" data-mode="public">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STARS SMP — Serveur Minecraft scénarisé</title>
+<meta name="description" content="STARS SMP : huit éléments, huit dimensions. Craft tes pouvoirs sur le serveur public ou rejoins le cercle des élus sur le serveur privé.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<div class="wipe" id="wipe" aria-hidden="true"></div>
+
+<header class="top">
+  <a href="#accueil" class="brand"><img src="logo.png" alt="" width="40" height="40"><span>STARS SMP</span></a>
+  <nav class="links" id="links">
+    <a href="#serveur">Le serveur</a>
+    <a href="#elements">Éléments</a>
+    <a href="#dimensions" data-only="private">Dimensions</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#lore">Lore</a>
+    <a href="#rejoindre"><span data-only="public">Rejoindre</span><span data-only="private">Postuler</span></a>
+  </nav>
+  <div class="switch" role="group" aria-label="Choisir le serveur">
+    <span class="thumb" aria-hidden="true"></span>
+    <button type="button" data-set="public" aria-pressed="true">Public</button>
+    <button type="button" data-set="private" aria-pressed="false">Privé</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <img class="hero-logo" src="logo.png" alt="Logo STARS SMP" width="220" height="220">
+  <p class="badge" id="status"><i></i><span data-only="public">Serveur public</span><span data-only="private">Serveur privé · sur sélection</span></p>
+  <h1>
+    <span data-only="public">Craft ton élément.<br>Construis ta légende.</span>
+    <span data-only="private">Le cercle des élus<br>affronte les gardiens.</span>
+  </h1>
+  <p class="sub">
+    <span data-only="public">Une aventure Minecraft ouverte à tous, bâtie autour de huit éléments : explore, construis et fabrique tes pouvoirs.</span>
+    <span data-only="private">Huit dimensions, huit gardiens custom et une progression scénarisée, réservées aux joueurs choisis par l'équipe.</span>
+  </p>
+  <div class="cta">
+    <button class="btn primary" data-copy><span data-only="public">Copier l'IP</span><span data-only="private">Copier l'IP du privé</span></button>
+    <a class="btn ghost" href="#elements">Voir les pouvoirs</a>
+  </div>
+  <div class="facts" data-only="private">
+    <div><b>8</b>éléments</div><div><b>8</b>dimensions</div><div><b>8</b>gardiens</div>
+  </div>
+</section>
+
+<section id="serveur" class="block">
+  <div class="head"><h2><span data-only="public">Le serveur public</span><span data-only="private">Le serveur privé</span></h2></div>
+  <ul class="feat" data-only="public">
+    <li><h3>Ouvert à tous</h3><p>Aucune sélection : connecte-toi et commence.</p></li>
+    <li><h3>Pouvoirs craftables</h3><p>Les 8 éléments se fabriquent grâce à des recettes.</p></li>
+    <li><h3>Exploration &amp; construction</h3><p>Minecraft comme tu l'aimes, avec l'univers des éléments.</p></li>
+    <li><h3>Événements réguliers</h3><p>Une communauté active et des animations.</p></li>
+  </ul>
+  <ul class="feat" data-only="private">
+    <li><h3>Accès sur sélection</h3><p>Uniquement des joueurs choisis par l'équipe, dont des créateurs de contenu.</p></li>
+    <li><h3>Runes &amp; dimensions</h3><p>Une rune par dimension pour ouvrir son portail.</p></li>
+    <li><h3>Boss custom</h3><p>Un gardien par dimension, jusqu'à 4 phases de combat.</p></li>
+    <li><h3>Lore &amp; événements</h3><p>Une progression scénarisée et des événements spéciaux.</p></li>
+  </ul>
+</section>
+
+<section id="elements" class="block">
+  <div class="head"><h2>Les 8 éléments</h2>
+    <p><span data-only="public">En public, chaque pouvoir se craft.</span><span data-only="private">En privé, chaque pouvoir se mérite en battant son gardien.</span></p></div>
+  <div class="tabs" id="elTabs" role="tablist"></div>
+  <article class="panel" id="elPanel"></article>
+</section>
+
+<section id="dimensions" class="block" data-only="private">
+  <div class="head"><h2>Les 8 dimensions</h2><p>Choisis une dimension pour voir son gardien.</p></div>
+  <div class="dims" id="dimGrid"></div>
+  <article class="panel" id="dimPanel" hidden></article>
+</section>
+
+<section id="parcours" class="block">
+  <div class="head"><h2><span data-only="public">Ton parcours en 4 étapes</span><span data-only="private">Ton parcours en 11 étapes</span></h2></div>
+  <ol class="steps" id="steps"></ol>
+</section>
+
+<section id="lore" class="block">
+  <div class="head"><h2>Le lore de STARS SMP</h2></div>
+  <div class="lore" id="lore"></div>
+</section>
+
+<section id="rejoindre" class="block">
+  <div class="join">
+    <h2><span data-only="public">Prêt à jouer ?</span><span data-only="private">Rejoins le cercle des élus</span></h2>
+    <p data-only="private">L'accès se fait sur sélection. Passe par le Discord pour candidater.</p>
+    <p data-only="public">Copie l'IP, lance Minecraft et rejoins l'aventure.</p>
+    <div class="ip"><span id="ip"></span><button class="btn ghost small" data-copy id="copyBtn">Copier</button></div>
+    <p class="muted" id="ver"></p>
+    <a class="btn primary" id="discord" href="#"><span data-only="public">Rejoindre le Discord</span><span data-only="private">Candidater sur Discord</span></a>
+  </div>
+</section>
+</main>
+
+<footer><img src="logo.png" alt="" width="56" height="56"><p>STARS SMP — Serveur Minecraft non affilié à Mojang ou Microsoft.</p></footer>
+<div class="toast" id="toast" role="status">IP copiée</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
